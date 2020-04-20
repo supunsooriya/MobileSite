@@ -1,0 +1,13 @@
+.vl {
+    border-left: 0.5px solid rgb(224, 213, 213);
+    height: 750px;
+    position: absolute;
+    left: 30%;
+    top: 62px;
+}
+
+hr {
+    border-bottom: 0.5px solid rgb(224, 213, 213);
+}
+
+/* * {background-color:   #707676 !important;} */

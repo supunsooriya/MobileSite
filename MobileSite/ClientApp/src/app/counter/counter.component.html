@@ -1,0 +1,119 @@
+<body style="color: #707676;">
+
+  <div class="col-md-2">
+
+  </div>
+
+  <div class="col-md-8 panel panel-default panel-wrapper">
+    <div>
+      <nav class="navbar navbar-expand-lg " style="margin-top: 5px;">
+
+        <div class="collapse navbar-collapse col-md-12" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto col-md-8">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">SELECT LOCATION <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="margin-left: 40px;">
+              <a class="nav-link" href="#">CATOGORY</a>
+            </li>
+          </ul>
+          <div class="col-lg-4 search-box">
+            <input type="search" id="search" value="" [(ngModel)]="searchText" class="form-control"
+              placeholder="Search using Name">
+          </div>
+        </div>
+      </nav>
+    </div>
+    <hr style="margin-left: -15px; margin-right: -15px; margin-top: -26px;">
+
+    <div class="panel-leftheading">
+      <div class="col-md-4">
+        <div style="margin-top:30px;">
+          <div style="width:200px; ">
+            <div id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
+                  Collapsible Group Item #1
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <ul>
+                  <li><button class="btn btn-link">Samsung</button></li>
+                  <li><button class="btn btn-link">Nokia</button></li>
+                  <li><button class="btn btn-link">Huawei</button></li>
+                  <li><button class="btn btn-link">Dialog</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr style="width:230px; margin-left:-17px;">
+        <div>
+          <div style="width:200px; ">
+            <div id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                  aria-controls="collapseTwo">
+                  Collapsible Group Item #1
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <ul>
+                  <li><button class="btn btn-link">Colombo</button></li>
+                  <li><button class="btn btn-link">Kurunegala</button></li>
+                  <li><button class="btn btn-link">Kandy</button></li>
+                  <li><button class="btn btn-link">Mathle</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-rightbody">
+        <div class="vl"></div>
+        <div class="col-md-8">
+
+          <div class="row">
+            <div class="col-md-8">
+              <div>
+                <p><b>Lorem ipsum dolor sit olor sit..</b></p>
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+
+              <div class="panel panel-info" style="width: 550px;">
+
+                <div class="panel-body" *ngFor="let Dl of Data | filter:searchText;" style="height: 140px;">
+                  <a [routerLinkActive]='["link-active"]' [routerLink]='["/fetch-data"]' href="">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img class="img-responsive" src="{{Dl.imagePath}}">
+                      </div>
+                      <div class="col-md-8">
+                        <h4 class="product-name"><strong>{{Dl.name}}</strong></h4>
+                        <h4><small>{{Dl.para}}</small></h4>
+                      </div>
+                    </div>
+                  </a>
+                  <hr>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+
+  </div>
+
+</body>
